@@ -1,15 +1,5 @@
-
-<div class="p-3 bg-green-500 text-3xl text-white flex justify-between">
-  <p class="font-bold p-1">My Shop</p>
-  <button class="w-1/8 px-5 text-2xl bg-green-600 font-bold rounded text-center">Login</button>
-</div>
-
 <app-item-search/>
-
 <div class="mx-10 mt-5 grid lg:grid-cols-6 sm:grid-cols-3 gap-3">
   <app-item *ngFor="let item of items" [item]="item"/>
 </div>
 
-
-
-<router-outlet />
