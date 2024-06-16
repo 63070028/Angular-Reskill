@@ -11,7 +11,16 @@
           <div>Cart</div>
         </button>
         <button class="px-5 bg-green-600 rounded">Login</button>
-    <div class="border-4 bg-yellow-300 rounded-full p-5 hover:cursor-pointer"></div>
+    <div class="border-4 bg-yellow-300 rounded-full p-5 hover:cursor-pointer" (click)="isHoverAccountMenu = !isHoverAccountMenu"></div>
   </div>
 </div>
+
+<div *ngIf="isHoverAccountMenu" class="absolute border-2 rounded py-2 text-xl font-light left-3/4 bg-white w-3/12 select-none">
+  <div class="pl-5 py-2 hover:bg-gray-100 hover:cursor-pointer">บัญชีของฉัน</div>
+  <div class="pl-5 py-2 hover:bg-gray-100 hover:cursor-pointer">รายการคำสั่งซื้อ</div>
+  <div class="pl-5 py-2 hover:bg-gray-100 hover:cursor-pointer">รายการสินค้่าที่สนใจ</div>
+  <div class="pl-5 py-2 hover:bg-gray-100 hover:cursor-pointer">รีวิวของฉัน</div>
+  <div class="pl-5 py-2 hover:bg-gray-100 hover:cursor-pointer">ออกจากระบบ</div>
+</div>
+
 <router-outlet />
