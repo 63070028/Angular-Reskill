@@ -1,5 +1,17 @@
-<div class="p-3 bg-green-500 text-3xl text-white flex justify-between">
-  <p class="font-bold p-1">My Shop</p>
-  <button class="w-1/8 px-5 text-2xl bg-green-600 font-bold rounded text-center">Login</button>
+<div class="p-3 bg-green-500 text-center text-white font-bold grid grid-cols-12">
+  <div class="text-3xl pt-1 col-span-12 sm:col-span-2 hover:cursor-pointer" [routerLink]="'/'">My Shop</div>
+  <div class="sm:grid gap-2 lg:grid-cols-12 lg:col-span-5 sm:grid-cols-12 sm:col-span-10 hidden">
+      <div class="text-4xs content-center sm:col-span-4 lg:col-span-2 hover:cursor-pointer">Home</div>
+      <div class="text-4xs content-center sm:col-span-4 lg:col-span-2 hover:cursor-pointer">Product</div>
+      <div class="text-4xs content-center sm:col-span-4 lg:col-span-2 hover:cursor-pointer">Promotions</div>
+  </div>
+  <div class="gap-2 col-span-5 justify-end lg:flex hidden">
+        <button class="px-5 bg-green-600 rounded relative">
+          <div class="absolute p-0.5 text-center bg-red-600 rounded-full left-3/4 bottom-2/3 text-xs" style="width: 20px; height: 20px">1</div>
+          <div>Cart</div>
+        </button>
+        <button class="px-5 bg-green-600 rounded">Login</button>
+    <div class="border-4 bg-yellow-300 rounded-full p-5 hover:cursor-pointer"></div>
+  </div>
 </div>
 <router-outlet />
