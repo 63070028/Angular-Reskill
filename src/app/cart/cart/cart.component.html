@@ -1,0 +1,66 @@
+<div class="h-screen">
+
+  <ng-container *ngIf="cart.totalQty > 0; else cartEmpty">
+    <div class="p-20 w-full flex flex-col lg:flex-row justify-between gap-y-10">
+      <table class="border-collapse border border-slate-500 lg:w-3/5">
+        <thead class="text-lg">
+        <tr>
+          <th class="py-2 border border-slate-600">สินค้า</th>
+          <th class="py-2 border border-slate-600">ราคาต่อชิ้น(บาท)</th>
+          <th class="py-2 border border-slate-600">จำนวน</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr class="text-center pl-3 py-2" *ngFor="let item of cart.items">
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>
+              <div class="flex justify-center p-2 gap-20">
+                <div class="border border-1 border-gray-200 p-2">
+                  <span class="rounded-full active:bg-gray-200 px-4 py-2">-</span>
+                  <span class="px-4 py-2">{{item.qty}}</span>
+                  <span class="rounded-full active:bg-gray-200 px-4 py-2">+</span>
+                </div>
+                <div class="flex items-center">
+                  <button class="bg-red-600 px-2">x</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="lg:w-4/12">
+        <div class="grid w-full border-2 p-3 gap-4">
+          <div>สรุปการสั่งซื้อ</div>
+          <div class="grid grid-cols-2 text-gray-500">
+            <p>ยอดรวมสินค้า</p>
+            <p class="text-right">x</p>
+            <p>ส่วนลดคูปอง</p>
+            <p class="text-right">x</p>
+            <p>ค่าจัดส่ง</p>
+            <p class="text-right">x</p>
+          </div>
+          <div class="flex justify-between">
+            <div>
+              <p class="font-bold">ยอดสุทธิ</p>
+              <p class="text-xs text-gray-500">(รวมภาษีมูลค่าเพิ่ม)</p>
+            </div>
+            <div class="font-bold">฿ xxxxxx</div>
+          </div>
+          <button class="w-full py-2 bg-green-600 text-center text-white">ทำการสั่งซื้อ</button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #cartEmpty>
+    <div class="w-full flex flex-col h-5/6 justify-center items-center gap-3" [routerLink]="'/'">
+      <div class="text-lg font-bold">ไม่มีสินค้าอยู่ในรถเข็น</div>
+      <div class="text-lg text-gray-500">เลือกสินค้าที่โดนใจมาใส่ไว้ในรถเข็นได้เลย</div>
+      <button class="bg-green-600 py-2 px-32 rounded text-white text-lg">กลับไปหน้าหลัก</button>
+    </div>
+  </ng-template>
+
+</div>
+

@@ -1,6 +1,6 @@
 export interface ItemDetails {
   name: string;
-  itemCode: string;
+  sku: string;
   reviewAvg: number;
   reviewCount: number;
   price: number;

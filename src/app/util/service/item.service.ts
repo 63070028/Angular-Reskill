@@ -22,18 +22,18 @@ export class ItemService {
   ]
 
   private mockItemsDetails: ItemDetails[] = [
-    {itemCode: "1", name:"Item1", price: 100, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "2", name:"Item2", price: 200, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "3", name:"Item3", price: 300, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "4", name:"Item4", price: 400, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "5", name:"Item5", price: 500, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "6", name:"Item6", price: 600, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "7", name:"Item7", price: 700, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "8", name:"Item8", price: 800, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "9", name:"Item9", price: 900, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "10", name:"Item10", price: 1000, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "11", name:"Item11", price: 1100, reviewAvg:4.5, reviewCount:10},
-    {itemCode: "12", name:"Item12", price: 1200, reviewAvg:4.5, reviewCount:10},
+    {sku: "1", name:"Item1", price: 100, reviewAvg:4.5, reviewCount:10},
+    {sku: "2", name:"Item2", price: 200, reviewAvg:4.5, reviewCount:10},
+    {sku: "3", name:"Item3", price: 300, reviewAvg:4.5, reviewCount:10},
+    {sku: "4", name:"Item4", price: 400, reviewAvg:4.5, reviewCount:10},
+    {sku: "5", name:"Item5", price: 500, reviewAvg:4.5, reviewCount:10},
+    {sku: "6", name:"Item6", price: 600, reviewAvg:4.5, reviewCount:10},
+    {sku: "7", name:"Item7", price: 700, reviewAvg:4.5, reviewCount:10},
+    {sku: "8", name:"Item8", price: 800, reviewAvg:4.5, reviewCount:10},
+    {sku: "9", name:"Item9", price: 900, reviewAvg:4.5, reviewCount:10},
+    {sku: "10", name:"Item10", price: 1000, reviewAvg:4.5, reviewCount:10},
+    {sku: "11", name:"Item11", price: 1100, reviewAvg:4.5, reviewCount:10},
+    {sku: "12", name:"Item12", price: 1200, reviewAvg:4.5, reviewCount:10},
   ]
 
   constructor() { }
@@ -43,6 +43,6 @@ export class ItemService {
   }
 
   public getItemById(id:string):ItemDetails | undefined {
-      return this.mockItemsDetails.find( item => item.itemCode === id);
+      return this.mockItemsDetails.find( item => item.sku === id);
   }
 }
